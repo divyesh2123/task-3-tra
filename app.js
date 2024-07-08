@@ -39,3 +39,30 @@ const reviews = [
 ];
 // select items
 
+let index=0;
+
+displayInfo();
+
+function nextInfo()
+{
+  index = index+1;
+  displayInfo();
+}
+
+function prevInfo()
+{
+  index=index-1;
+  displayInfo();
+}
+
+function displayInfo()
+{
+  document.getElementById("person-img").src =reviews[index].img;
+
+  document.getElementById("author").innerHTML = reviews[index].name;
+
+  document.getElementById("job").innerHTML = reviews[index].job;
+
+  document.getElementById("info").innerHTML = reviews[index].text;
+
+}
